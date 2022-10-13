@@ -1,0 +1,41 @@
+header {
+  @include flexHeader;
+  min-height: 100vh;
+  color: #ffffff;
+  background-color: skyblue;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-image: url(../myndir/header.jpg);
+  
+  .content {
+    @include flexHeader;
+    z-index: 2;
+    gap: calc(var($spacing) * 2);
+    margin: auto;
+    width: calc(100% - (2 * var($offset)));
+    font-family: var($font-family-heading);
+    font-size: calc(var($font-base-size) * 1.5);
+    text-align: center;
+    }
+}
+header {
+  h1 {
+    font-size: 4rem;
+  }
+  span {
+    font-size: 2rem;
+  }
+  .protection {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+  
+  
+  
+  

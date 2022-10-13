@@ -1,0 +1,30 @@
+@mixin flexHeader {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+@mixin gridInfo {
+    display:grid;
+    grid-template-rows: auto;
+}
+
+@import './configs';
+@import './layouts';
+@import './fontss';
+@import './headers';
+@import './infos';
+@import './cardss';
+@import './footers';
+@import './buttons';
+@import './variables'
+
+
+
+
+
+ 
+  
+  
+  
+ 
+

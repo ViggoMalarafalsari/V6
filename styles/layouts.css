@@ -1,0 +1,9 @@
+main {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  gap: var(--vertical-space);
+  margin: var(--vertical-space) auto;
+  width: calc(100% - 2 * var(--offset));
+  max-width: var(--max-width);
+}/*# sourceMappingURL=layouts.css.map */

@@ -1,0 +1,17 @@
+@font-face {
+    font-family: var(--font-family-heading);
+    font-style: normal;
+    font-display: swap;
+    src: url(./fonts/domine.ttf) format('woff');
+  }
+  
+  @font-face {
+    font-family:  var(--font-family-base);
+    font-style: normal;
+    font-display: swap;
+    src: url(./fonts/nunito.ttf) format('woff');
+  }
+  h1, h2, h3 {
+    font-family: var(--font-family-heading);
+  }
+    

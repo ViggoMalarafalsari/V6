@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+  }
+
+  :root {
+      --spacing: 1rem;
+      --grid-color: hsla(0, 75%, 75%, 0.25);
+      --grid-repeating-width: calc(100% / var(--columns));
+      --grid-column-width: calc((100% / var(--columns)) - var(--gutter));
+      --grid-background-width: calc(100% + var(--gutter));
+      --grid-background-columns: repeating-linear-gradient(
+        to right,
+        var(--grid-color),
+        var(--grid-color) var(--grid-column-width),
+        transparent var(--grid-column-width),
+        transparent var(--grid-repeating-width)
+      );
+     --columns: 12;
+     --gutter: 30px;
+     --offset: 20px;
+     --max-width: 1200px;
+
+     --font-base-size: 1rem;
+     --font-base-body-px: 16px;
+    }
+
+    html {
+      position: relative;
+    }
+    html::before {
+      content:'';
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      margin-right: auto;
+      margin-left: auto;
+
+      width: calc(100% - (2 * var(--offset)));
+      max-width: var(--max-width);
+      min-height: 100vh;
+      background-image: var(--grid-background-columns);
+      background-size: var(--grid-background-width) 100%;
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+   .row {
+    content: "";
+   }
+   .row::after {
+    content: "";
+    clear: both;
+    display: table;
+   }
+   .col-11 {
+    float: left;
+    width: 91.66666667%;
+   }
+   .col-10 {
+    float: left;
+    width: 83.33333333%;
+   }
+   .col-9 {
+    float: left;
+    width: 75%;
+   }
+   .col-8 {
+    float: left;
+    width: 66.66666667%;
+  }
+   .col-7 {
+    float: left;
+    width: 58.33333333%;
+   }
+   .col-6 {
+    float: left;
+    width: 50%;
+   }
+   .col-5 {
+    float: left;
+    width: 41.66666667%;
+   }
+   .col-4 {
+    float: left;
+    width: 33.33333333%;
+   }
+   .col-3 {
+    float: left;
+    width: 25%;
+   }
+   .col-2 {
+    float: left;
+    width: 16.66666667%;
+   }
+   .col-1 {
+    float: left;
+    width: 8.33333333%;
+   }
+
+  @media all and (min-width: 600px) {
+    .col-12 {
+      float: left;
+      width: 100%;
+     }
+  }

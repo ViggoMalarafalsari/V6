@@ -1,0 +1,88 @@
+.info-boxes {
+    @include gridInfo;
+    width: 100%;
+    gap: var(--vertical-space);
+  }
+  
+  @media (min-width: 600px) {
+    ::root {
+      --vertical-space: calc(var(--gutter) * 2);
+    }
+  
+    .info-boxes {
+      @include gridInfo;
+      width: 100%;
+      gap: var(--gutter);
+    }
+  
+    .info {
+      display: grid;
+      grid-template-columns: repeat(var(--columns), 1fr);
+      grid-template-rows: auto;
+      gap: var(--gutter);
+    }
+  
+    .info .content {
+      grid-column: 1 / span 6;
+    }
+  
+    .info .image {
+      grid-column: 7 / span 6;
+    }
+  
+    .info-right .content {
+      grid-column: 7 / span 6;
+    }
+  
+    .info-right .image {
+      grid-column: 1 / span 6;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    .info .content {
+      grid-column: 2 / span 4;
+    }
+  
+    .info .image {
+      grid-column: 7 / span 6;
+    }
+  
+    .info-right .content {
+      grid-column: 8 / span 4;
+    }
+  
+    .info-right .image {
+      grid-column: 1 / span 6;
+    }
+  }
+  .info .content {
+    margin: auto;
+  }
+  
+  .info .content p {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  
+  .info .kicker {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+  
+  .info .image {
+    display: flex;
+  }
+  
+  .info .image img {
+    margin: auto;
+    transform: rotateZ(2deg);
+  }
+  
+  .info-right .image img {
+    transform: rotateZ(-2deg);
+  }
+  
+  .info-right .content {
+    order: 2;
+  }

@@ -1,0 +1,20 @@
+.button {
+    display: inline-block;
+  
+    border: 1px solid $color-border;
+    border-radius: 5px;
+    padding: ($spacing / 2) $spacing;
+  
+    font-family: $font-family-base;
+    text-decoration: none;
+  
+    color: $color-text;
+    background-color: $color-primary;
+  }
+  
+  .button-secondary {
+    border: none;
+    color: inherit;
+    background-color: transparent;
+  }
+  
